@@ -11,6 +11,7 @@
 		B5CE114E2A965366001E6C3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE114D2A965366001E6C3E /* ContentView.swift */; };
 		B5CE11502A965368001E6C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CE114F2A965368001E6C3E /* Assets.xcassets */; };
 		B5CE11532A965368001E6C3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CE11522A965368001E6C3E /* Preview Assets.xcassets */; };
+		B5CE11612A96586A001E6C3E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE11602A96586A001E6C3E /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B5CE114D2A965366001E6C3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5CE114F2A965368001E6C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5CE11522A965368001E6C3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5CE11602A96586A001E6C3E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,9 @@
 		B5CE114A2A965366001E6C3E /* Habitros */ = {
 			isa = PBXGroup;
 			children = (
+				B5CE115C2A9657CF001E6C3E /* Model */,
+				B5CE115B2A9657C7001E6C3E /* Core */,
+				B5CE115A2A9657BF001E6C3E /* Components */,
 				B5CE114B2A965366001E6C3E /* HabitrosApp.swift */,
 				B5CE114D2A965366001E6C3E /* ContentView.swift */,
 				B5CE114F2A965368001E6C3E /* Assets.xcassets */,
@@ -65,6 +70,52 @@
 				B5CE11522A965368001E6C3E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5CE115A2A9657BF001E6C3E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B5CE115B2A9657C7001E6C3E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B5CE115F2A965818001E6C3E /* Authentication */,
+				B5CE115E2A965811001E6C3E /* Profile */,
+				B5CE115D2A9657DB001E6C3E /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B5CE115C2A9657CF001E6C3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5CE115D2A9657DB001E6C3E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B5CE115E2A965811001E6C3E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B5CE115F2A965818001E6C3E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B5CE11602A96586A001E6C3E /* LoginView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CE11612A96586A001E6C3E /* LoginView.swift in Sources */,
 				B5CE114E2A965366001E6C3E /* ContentView.swift in Sources */,
 				B5CE114C2A965366001E6C3E /* HabitrosApp.swift in Sources */,
 			);
