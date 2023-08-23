@@ -27,98 +27,58 @@ struct ContentView: View {
                 .rotationEffect(.degrees(135))
                 .offset(y: -390)
                 .shadow(color: Color("Blue2"), radius:10)
-//            ZStack{
-//                Text("thrive")
-//                    .foregroundColor(Color("Gray1"))
-//                    .font(.system(size: 20, weight: .bold, design: .rounded))
-//                    .shadow(color: Color("Gray1"), radius: 5, x: 1, y: 1)
-//
-//                Circle() //Gray circle
-//                    .stroke(lineWidth: 5)
-//                    .frame(width: 150, height: 150)
-//                    .foregroundColor(Color("Blue1"))
-//
-//                Circle() //Ring
-//                    .trim(from: 0, to: 1/4)
-//                    .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
-//                    .frame(width: 150, height: 150)
-//                    .foregroundColor(Color("Gray1"))
-//                //small circle at the rings tip
-//                    .overlay(Circle()
-//                        .frame(width: 15, height: 15)
-//                        .foregroundColor(Color("Gray1"))
-//                        .offset(x: 0, y: 75)
-//                    ).shadow(color: Color("Gray1"), radius: 5, x: 1, y: 1)
-//                    .offset()
-//                    .rotationEffect(.degrees(isSpinning ? 360 : 0))
-//                    .animation(Animation.linear(duration: 2).repeatForever(autoreverses: false))
-//                    .onAppear(){
-//                        self.isSpinning.toggle()
-//                    }
-//            }//Zstack
-//            .padding(.bottom)
-//            .offset(x: -0, y: -300)
             VStack(spacing: 40){
 //                HStack(spacing:50){
                 Text("Habitrós")
                     .foregroundColor(Color("Gray1"))
                     .font(.system(size: 40, weight: .bold, design: .rounded))
-                    .offset(x: -100, y: -90)
+                    .offset(x: -100, y: -0)
 
 //                }//Hstack
                 Text("where goals become gains")
                     .foregroundColor(Color("Gray1"))
                     .font(.system(size: 20, weight: .bold, design: .rounded))
-                    .offset(x: -55, y: -130)
+                    .offset(x: -55, y: -30)
                 
-                VStack(){
-                    TextField("Email", text: $email)
-                        .foregroundColor(Color("Gray1"))
-                        .font(.system(size: 20, weight: .bold, design: .rounded))
-                        .textFieldStyle(.plain)
-                        .placeholder(when: email.isEmpty) {
-                            Text("")
-                                .foregroundColor(.white)
-                                .bold()
-                        }
-                                        
-                    VStack(spacing: 30){
-                        
-                        Rectangle()
-                            .frame(width: 350, height: 1)
-                            .foregroundColor(Color("Gray1"))
-                        
-                        SecureField("Password", text: $password)
-                            .foregroundColor(Color("Gray1"))
-                            .font(.system(size: 20, weight: .bold, design: .rounded))
-                            .textFieldStyle(.plain)
-                            .placeholder(when: password.isEmpty) {
-                                Text("")
-                                    .foregroundColor(Color("Gray1"))
-                                    .bold()
-                            }
-                        
-
+                VStack(spacing: 24){
+                    
+                    InputView(text: $email, title: "Email Address", placeholder: "name@example.com", isSecureField: false)
+                        .autocapitalization(.none)
+                    
+                    InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
                     }//Vstack
-                
-                    Rectangle()
-                        .frame(width: 350, height: 1)
-                        .foregroundColor(Color("Gray1"))
+                .padding(.horizontal)
                     
                     Button{
                         //signup
                     } label: {
-                        Text("Sign up")
-                            .bold()
-                            .frame(width: 200, height: 40)
-                            .foregroundColor(.black)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                    .fill(.linearGradient(colors: [Color("Gray1")], startPoint: .top, endPoint: .bottomTrailing))
-                                    .opacity(0.5)
-                            )
+                        HStack{
+                            Text("SIGN IN")
+                                .bold()
+                                .font(.system(size: 15, weight: .bold, design: .rounded))
+                            Image(systemName: "arrow.right")
+                                .fontWeight(.bold)
+                        }//Hstack
+                        .frame(width: 150, height: 40)
+                        .foregroundColor(.black)
                     }//Button
-                    .padding(.vertical, 20)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.linearGradient(colors: [Color("Gray1")], startPoint: .top, endPoint: .bottomTrailing))
+                            .opacity(0.5)
+                    )
+                
+                
+                //SignUp Button
+                NavigationLink{
+                    
+                }label: {
+                    HStack{
+                        Text("Don't have an account?")
+                        Text("Sign up today!")
+                    }
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                }
                                         
                         
                 }//Vstack
@@ -131,9 +91,9 @@ struct ContentView: View {
             .padding(.top)
 
         }//ZStack
-        .ignoresSafeArea()
+//        .ignoresSafeArea()
     }
-}
+//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

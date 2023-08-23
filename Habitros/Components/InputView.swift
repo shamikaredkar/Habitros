@@ -29,7 +29,9 @@ struct InputView: View {
                 TextField(placeholder, text:$text)
                     .font(.system(size: 15, weight: .bold, design: .rounded))
             }//if-else
-            Divider()
+            Rectangle()
+                .frame(width: 350, height: 1)
+                .foregroundColor(Color("Gray1"))
         }//Vstack
     }
 }
