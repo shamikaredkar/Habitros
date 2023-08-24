@@ -15,6 +15,8 @@
 		B5CE11662A965D10001E6C3E /* CommentedCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE11652A965D10001E6C3E /* CommentedCode.swift */; };
 		B5CE11682A96784A001E6C3E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE11672A96784A001E6C3E /* RegistrationView.swift */; };
 		B5CE116E2A9680D9001E6C3E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE116D2A9680D9001E6C3E /* LoginView.swift */; };
+		B5CE11702A9703FC001E6C3E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE116F2A9703FC001E6C3E /* ProfileView.swift */; };
+		B5CE11722A97075C001E6C3E /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE11712A97075C001E6C3E /* SettingsRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		B5CE11652A965D10001E6C3E /* CommentedCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentedCode.swift; sourceTree = "<group>"; };
 		B5CE11672A96784A001E6C3E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		B5CE116D2A9680D9001E6C3E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B5CE116F2A9703FC001E6C3E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B5CE11712A97075C001E6C3E /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B5CE11622A9659DB001E6C3E /* InputView.swift */,
+				B5CE11712A97075C001E6C3E /* SettingsRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 		B5CE115E2A965811001E6C3E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B5CE116F2A9703FC001E6C3E /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -209,7 +215,9 @@
 				B5CE11662A965D10001E6C3E /* CommentedCode.swift in Sources */,
 				B5CE11632A9659DB001E6C3E /* InputView.swift in Sources */,
 				B5CE11682A96784A001E6C3E /* RegistrationView.swift in Sources */,
+				B5CE11722A97075C001E6C3E /* SettingsRowView.swift in Sources */,
 				B5CE114E2A965366001E6C3E /* ContentView.swift in Sources */,
+				B5CE11702A9703FC001E6C3E /* ProfileView.swift in Sources */,
 				B5CE114C2A965366001E6C3E /* HabitrosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
