@@ -13,7 +13,7 @@ struct HabitrosApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            ContentView()
                 .environmentObject(viewModel)
         }
     }

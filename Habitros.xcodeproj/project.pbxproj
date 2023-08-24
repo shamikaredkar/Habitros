@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B5CE114C2A965366001E6C3E /* HabitrosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE114B2A965366001E6C3E /* HabitrosApp.swift */; };
-		B5CE114E2A965366001E6C3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE114D2A965366001E6C3E /* ContentView.swift */; };
 		B5CE11502A965368001E6C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CE114F2A965368001E6C3E /* Assets.xcassets */; };
 		B5CE11532A965368001E6C3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CE11522A965368001E6C3E /* Preview Assets.xcassets */; };
 		B5CE11632A9659DB001E6C3E /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE11622A9659DB001E6C3E /* InputView.swift */; };
@@ -48,12 +47,12 @@
 		B5CE11AD2A97AB2C001E6C3E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B5CE11AC2A97AB2C001E6C3E /* FirebaseStorage */; };
 		B5CE11AF2A97AB2C001E6C3E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B5CE11AE2A97AB2C001E6C3E /* FirebaseStorageCombine-Community */; };
 		B5CE11B32A97AC93001E6C3E /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE11B22A97AC93001E6C3E /* AuthViewModel.swift */; };
+		B5CE11B52A97B9D6001E6C3E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE11B42A97B9D6001E6C3E /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B5CE11482A965366001E6C3E /* Habitros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habitros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CE114B2A965366001E6C3E /* HabitrosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitrosApp.swift; sourceTree = "<group>"; };
-		B5CE114D2A965366001E6C3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B5CE114F2A965368001E6C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5CE11522A965368001E6C3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5CE11622A9659DB001E6C3E /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		B5CE11752A9795AE001E6C3E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5CE11772A97A992001E6C3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5CE11B22A97AC93001E6C3E /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B5CE11B42A97B9D6001E6C3E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 				B5CE115B2A9657C7001E6C3E /* Core */,
 				B5CE115A2A9657BF001E6C3E /* Components */,
 				B5CE114B2A965366001E6C3E /* HabitrosApp.swift */,
-				B5CE114D2A965366001E6C3E /* ContentView.swift */,
+				B5CE11B42A97B9D6001E6C3E /* ContentView.swift */,
 				B5CE11642A965CF6001E6C3E /* CommentedCode */,
 				B5CE114F2A965368001E6C3E /* Assets.xcassets */,
 				B5CE11772A97A992001E6C3E /* GoogleService-Info.plist */,
@@ -327,11 +327,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CE116E2A9680D9001E6C3E /* LoginView.swift in Sources */,
+				B5CE11B52A97B9D6001E6C3E /* ContentView.swift in Sources */,
 				B5CE11662A965D10001E6C3E /* CommentedCode.swift in Sources */,
 				B5CE11632A9659DB001E6C3E /* InputView.swift in Sources */,
 				B5CE11682A96784A001E6C3E /* RegistrationView.swift in Sources */,
 				B5CE11722A97075C001E6C3E /* SettingsRowView.swift in Sources */,
-				B5CE114E2A965366001E6C3E /* ContentView.swift in Sources */,
 				B5CE11742A97907D001E6C3E /* TextView.swift in Sources */,
 				B5CE11B32A97AC93001E6C3E /* AuthViewModel.swift in Sources */,
 				B5CE11702A9703FC001E6C3E /* ProfileView.swift in Sources */,

@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    
+    //Auth variables
+    @EnvironmentObject var viewModel: AuthViewModel
+
+    
     @State private var email = ""
     @State private var fullname = ""
     @State private var password = ""
@@ -49,7 +54,9 @@ struct RegistrationView: View {
                 .padding(.horizontal)
                     
                     Button{
-                        //signup
+                        Task{
+                            try await viewModel.createUser(withEmail: email, password: password)
+                        }//Task
                     } label: {
                         HStack{
                             Text("SIGN UP")
