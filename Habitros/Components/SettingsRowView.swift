@@ -13,7 +13,17 @@ struct SettingsRowView: View {
     let tintColor: Color
     
     var body: some View {
-        HStack{
+        HStack(spacing: 20){
+            Image(systemName: imageName)
+                .imageScale(.small)
+                .font(.title)
+                .foregroundColor(tintColor)
+            
+            TextView(text: title)
+                .font(.subheadline)
+                .foregroundColor(.black)
+                .padding(.top, 4)
+            
             
         }//Hstack
     }

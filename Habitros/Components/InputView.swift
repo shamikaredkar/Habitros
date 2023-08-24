@@ -16,10 +16,9 @@ struct InputView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text(title)
+            
+            TextView(text: title)
                 .foregroundColor(Color("Gray1"))
-                .font(.system(size: 15, weight: .bold, design: .rounded))
-                .fontWeight(.semibold)
             
             //Password field
             if isSecureField{
