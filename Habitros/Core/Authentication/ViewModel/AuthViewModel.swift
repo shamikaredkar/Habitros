@@ -28,7 +28,17 @@ class AuthViewModel: ObservableObject {
         
     }//init
         func signIn(withEmail email: String, password: String) async throws {
-            print("Sign in")
+            do{
+                let result = try await Auth.auth().signIn(withEmail: email, password: password)
+                self.userSession = result.user
+                await fetchUser()
+                //DESCRIPTION: if we don't add the 'await fetchUser()' function -
+                //1. Once we log in with our user credentials, it will log us in and the screen will change but it will be a blank screen
+                //2. But because we aren't fetching any user, the whole ProfileView is wrapped inside of the 'if let' statement so the user has to be there for the ProfileView to render
+                //3. await fetchUser() gets the currently logged in user from firebase. It is important to wait to call that function because you need to signin first
+            }catch{
+                print("DEBUG: Failed to log in user with error \(error.localizedDescription)")
+            }//do-catch
         }//func
         
     
