@@ -9,11 +9,22 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+
+//@MainActor - Publishing all our UI changes on the main thread
+@MainActor
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
+    
     init(){
+        //If there is a current user logged in, they save that information in cache
+        self.userSession = Auth.auth().currentUser
+        
+        Task {
+            await fetchUser()
+        }//Task
+        
         
     }//init
         func signIn(withEmail email: String, password: String) async throws {
@@ -34,6 +45,7 @@ class AuthViewModel: ObservableObject {
                 let user = User(id: result.user.uid, fullname: fullname, email: email)
                 let encodeUser = try Firestore.Encoder().encode(user)
                 try await Firestore.firestore().collection("users").document(user.id).setData(encodeUser)
+                await fetchUser()
             }catch {
                 print("DEBUG: Failed to create user with error \(error.localizedDescription)")
             }//do-catch
@@ -48,6 +60,15 @@ class AuthViewModel: ObservableObject {
         }//func
         
         func fetchUser() async {
-            
+            //fetches the current user
+            guard let uid = Auth.auth().currentUser?.uid else {return}
+            do {
+                guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else {return}
+                self.currentUser = try? snapshot.data(as: User.self)
+                print("DEBUG: Current User is \(String(describing: self.currentUser ?? nil))")
+            }catch{
+                print("DEBUG: Failed to fetch users with error \(error.localizedDescription)")
+
+            }
         }//func
 }//class

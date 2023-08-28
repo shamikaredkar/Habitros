@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+//Codable: allows you to take incoming raw json data and map it to data object 
 struct User: Identifiable, Codable {
     let id: String
     let fullname: String
