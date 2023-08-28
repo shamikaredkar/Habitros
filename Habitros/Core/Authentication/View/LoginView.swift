@@ -73,6 +73,8 @@ struct LoginView: View {
                                 .fill(.linearGradient(colors: [Color("Gray1")], startPoint: .top, endPoint: .bottomTrailing))
                                 .opacity(0.5)
                         )
+                        .disabled(!formIsValid)
+                        .opacity(formIsValid ? 1.0 : 0.5)
                                     
                     NavigationLink {
                         RegistrationView()
@@ -94,11 +96,18 @@ struct LoginView: View {
     }//body
 }//struct
 
+//MARK: - Authetntication Protocol
+extension LoginView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty && email.contains("@") && !password.isEmpty && password.count > 5
+    }//var
+}//extension
+
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
-}
+}//struct
 
 extension View {
     func placeholder<Content: View>(

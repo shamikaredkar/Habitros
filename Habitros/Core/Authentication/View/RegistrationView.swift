@@ -73,6 +73,8 @@ struct RegistrationView: View {
                             .fill(.linearGradient(colors: [Color("Gray1")], startPoint: .top, endPoint: .bottomTrailing))
                             .opacity(0.5)
                     )
+                    .disabled(!formIsValid)
+                    .opacity(formIsValid ? 1.0 : 0.5)
                 
                 Button{
                     dismiss()
@@ -96,6 +98,12 @@ struct RegistrationView: View {
 //        .ignoresSafeArea()
     }//body
 
+//MARK: - Authetntication Protocol
+extension RegistrationView: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty && email.contains("@") && !password.isEmpty && password.count > 5 && confirmPassword==password && !fullname.isEmpty
+    }//var
+}//extension
 
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {

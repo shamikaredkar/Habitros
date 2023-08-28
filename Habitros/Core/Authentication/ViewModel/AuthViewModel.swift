@@ -9,6 +9,10 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+//form validation
+protocol AuthenticationFormProtocol {
+    var formIsValid: Bool {get}
+}//protocol
 
 //@MainActor - Publishing all our UI changes on the main thread
 @MainActor
