@@ -48,8 +48,22 @@ struct RegistrationView: View {
                     InputView(text: $fullname, title: "Full Name", placeholder: "Enter your full name", isSecureField: false)
                     
                     InputView(text: $password, title: "Password", placeholder: "Enter your password", isSecureField: true)
-                    
-                    InputView(text: $confirmPassword, title: "Confirm Password", placeholder: "Confirm your password", isSecureField: true)
+                    ZStack(alignment: .trailing){
+                        InputView(text: $confirmPassword, title: "Confirm Password", placeholder: "Confirm your password", isSecureField: true)
+                        if !password.isEmpty && confirmPassword.isEmpty{
+                            if password == confirmPassword{
+                                Image(systemName: "checkmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.black)
+                                    .foregroundColor(.green)
+                            }else{
+                                Image(systemName: "xmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.black)
+                                    .foregroundColor(.green)
+                            }
+                        }
+                    }//Zstack
                     }//Vstack
                 .padding(.horizontal)
                     
